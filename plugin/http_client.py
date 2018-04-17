@@ -14,8 +14,8 @@ if not from_cmdline:
 
 METHOD_REGEX = re.compile('^(GET|POST|DELETE|PUT|HEAD|OPTIONS|PATCH) (.*)$')
 HEADER_REGEX = re.compile('^([^()<>@,;:\<>/\[\]?={}]+):\\s*(.*)$')
-VAR_REGEX = re.compile('^# ?(:[^: ]+)\\s*=\\s*(.+)$')
-GLOBAL_VAR_REGEX = re.compile('^# ?(\$[^$ ]+)\\s*=\\s*(.+)$')
+VAR_REGEX = re.compile('^# ?(:[^:= ]+)\\s*=\\s*(.+)$')
+GLOBAL_VAR_REGEX = re.compile('^# ?(\$[^$= ]+)\\s*=\\s*(.+)$')
 FILE_REGEX = re.compile("!((?:file)|(?:(?:content)))\((.+)\)")
 JSON_REGEX = re.compile("(javascript|json)$", re.IGNORECASE)
 
